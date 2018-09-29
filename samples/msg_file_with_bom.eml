@@ -1,0 +1,602 @@
+﻿Received: from DB5EUR03FT033.eop-EUR03.prod.protection.outlook.com
+ (10.152.20.57) by DB5EUR03HT140.eop-EUR03.prod.protection.outlook.com
+ (10.152.21.173) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.20.1185.13; Thu, 27
+ Sep 2018 11:23:38 +0000
+Received: from EUR04-VI1-obe.outbound.protection.outlook.com (23.103.133.211)
+ by DB5EUR03FT033.mail.protection.outlook.com (10.152.20.76) with Microsoft
+ SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.20.1185.13 via
+ Frontend Transport; Thu, 27 Sep 2018 11:23:38 +0000
+Received: from DB6PR0802CA0044.eurprd08.prod.outlook.com (2603:10a6:4:a3::30)
+ by VI1PR0801MB1902.eurprd08.prod.outlook.com (2603:10a6:800:89::12) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1164.25; Thu, 27 Sep
+ 2018 11:23:35 +0000
+Received: from DB5EUR03FT064.eop-EUR03.prod.protection.outlook.com
+ (2a01:111:f400:7e0a::202) by DB6PR0802CA0044.outlook.office365.com
+ (2603:10a6:4:a3::30) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1185.20 via Frontend
+ Transport; Thu, 27 Sep 2018 11:23:35 +0000
+Authentication-Results: spf=fail (sender IP is 130.117.89.7)
+ smtp.mailfrom=petroservicesea.com; chemogroup.com; dkim=none (message not
+ signed) header.d=none;chemogroup.com; dmarc=none action=none
+ header.from=petroservicesea.com;
+Received-SPF: Fail (protection.outlook.com: domain of petroservicesea.com does
+ not designate 130.117.89.7 as permitted sender)
+ receiver=protection.outlook.com; client-ip=130.117.89.7;
+ helo=jupiter.iberlayer.com;
+Received: from jupiter.iberlayer.com (130.117.89.7) by
+ DB5EUR03FT064.mail.protection.outlook.com (10.152.21.199) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.20.1185.13 via Frontend Transport; Thu, 27 Sep 2018 11:23:35 +0000
+Received: from venus.iberlayer.com (venus.iberlayer.com [130.117.89.5])
+	by jupiter.iberlayer.com (Postfix) with ESMTP id 8A692160068;
+	Thu, 27 Sep 2018 13:23:34 +0200 (CEST)
+Received: from venus.iberlayer.com (localhost [127.0.0.1])
+	by venus.iberlayer.com (Postfix) with ESMTP id CF28340095;
+	Thu, 27 Sep 2018 13:23:32 +0200 (CEST)
+Received: from mail.ottsol.com (mail.ottsol.com [49.50.108.97])
+	by venus.iberlayer.com (Postfix) with ESMTPS id 95BC44008F;
+	Thu, 27 Sep 2018 13:23:28 +0200 (CEST)
+X-Envelope-From: <zamiru@petroservicesea.com>
+Received: from ([209.126.90.119]) by ottsol.com with MailEnable WebMail; Thu, 27 Sep 2018 16:53:02 +0530
+Date: Thu, 27 Sep 2018 12:23:02 +0100
+Message-ID: <1080382921@localhost>
+MIME-Version: 1.0
+From: "Jamison Krie [Tangent Trading Co. Ltd]" <zamiru@petroservicesea.com>
+Content-Type: multipart/mixed; boundary="__=_MixedPart_1984692412_192408273"
+Subject: RE: URGENT RFQ [Ref: TGT 2700918/015]
+To: <undisclosed-recipients>
+X-ACF: v2.45
+X-ACFC-V: 1.72
+X-ACFC-SA: clean
+X-ACFC-AV1: clean
+X-ACFC-OLESOS: clean
+X-ACFC-AV2: clean
+Return-Path: zamiru@petroservicesea.com
+X-EOPAttributedMessage: 0
+X-Forefront-Antispam-Report: CIP:130.117.89.7;IPV:NLI;CTRY:US;EFV:NLI;
+X-Microsoft-Exchange-Diagnostics: 1;DB5EUR03FT064;1:tsPJJXzcSRCUchry6LTVNoTyWPJ3u/1SWBcArYtBxr44a7GB8kLhe9W4zJB8hSjfdhyijqD1A5V/hn19/1d1PvFtANoHbe1vq6YHX92W1SBBV/2L+52xSpmD8MhLKOsI
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 9545037b-ab83-462c-06eb-08d6246ba9f9
+X-Microsoft-Antispam: BCL:0;PCL:0;RULEID:(7020095)(4652040)(8989299)(5600074)(711020)(2017052603328)(7153060)(49563074);SRVR:VI1PR0801MB1902;
+X-Microsoft-Exchange-Diagnostics: 1;VI1PR0801MB1902;3:19JIg5n0rHM+m7dvGEIN0GYtDvuk7YGbOuDaNOKpLjmSO7TBcyQRtw02GHHCxskoAGTQVHyavo+0BwZfm4UGD9nQFZvzQkxip+hB1tMPdcsMeAkfpwdjHaofO+oqIOjhAwI19c4OZtbzK9phVRkzeUVSe54PUS7iifnLPIkuhBF8fCfzdyEZneN8wyS7wpKVU4CEHZrINYoS/87+8A9OqbUYHIOYsGo6MUicBvOWQeHFWORbFV4X8ZmxcQlly/P/Rq9BOWkjKSgA8ON09UoHejpBtnbsVspSSZBG4lYoiPyaL/gAypc48RSlXGjKqrwn5ShIiQO9fBjholyir/T8Dx/418tWYH5xwi5GuAGRJL4=;25:bt35o1FHAiBudgj/t7JVamxkwL+IksIfbYkfdMSCIpOk3AhMQJ8tmzjiLihxUy3pnMzmpq0wP5wZ1D6CjL3VLw3i3nVbeG/oWyEL4VQrTdxyNxbY4853MOn25TBF81K1nDMM8btHEAqf4i9TL5/4vkUMbl+uuisykn7MCNU2QOZNexPO63KnN0MC/H3DhVq3p6pzbH+nraoxFuMln+4CDusX1ab7VFezaV6FXKexETptpCep98R3Xk6R1wUsCuXuGMO+vp3IQ8u3x5/kYm6WEbDmPD5JAoCSRp32+ZYPSTzKVqLKX1ngpHpojon0kLql6Cg8qZSnU7aKzqpjdQk3qdprmRUCJepFbLNDd+Tce+V/MZxyZ2pyabULpSfNZDYI
+X-MS-TrafficTypeDiagnostic: VI1PR0801MB1902:|DB5EUR03HT140:
+X-LD-Processed: 085a7b05-dd2e-4c19-b899-f34e1e196f69,ExtAddr
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: VI1PR0801MB1902
+X-EopAttribution-RoutedToQuarantineCount: 0
+X-MS-Exchange-Transport-CrossTenantHeadersStripped: DB5EUR03FT033.eop-EUR03.prod.protection.outlook.com
+X-Microsoft-Exchange-Diagnostics: 1;DB5EUR03FT033;1:r+Riq3M3IxZl+d9lpHa8O7YfqwWDV7/FGfb4jB/Kakoh4e968RktKKPyIRF5bOxjTltiXcAVaaPS53fpoYTpqeswBM0bQwtxgG895THoWajUlBq0OjgG6GYghspK7UX5
+X-OriginatorOrg: chemogroup.onmicrosoft.com
+
+--__=_MixedPart_1984692412_192408273
+Content-Type: multipart/alternative;
+	boundary="__=_AltPart_1273713894_1535890025"
+
+--__=_AltPart_1273713894_1535890025
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+ 
+
+Kind Attention: International Sales Manager:
+=C2=A0
+Dear Sir/Madam,
+
+
+I have contacted you severally=C2=A0with regards=C2=A0to the above subject =
+matter with no response, 
+kindly redirect me person in charge.
+
+The=C2=A0Tangent Trading Co. Ltd. We are representing around 100 world famo=
+us companies 
+and their products in market to the relevant sectors. Ensuring customer sup=
+ports and supplying 
+quality products is our main objectives.
+
+We are highly interested to represent and sell your products in United King=
+dom. 
+We have an established a reliable market here.=C2=A0We wish your products t=
+o be highly accepted. 
+
+We found that you are the best of manufacturer for these products. 
+
+It would be our pleasure if you kindly allow us to represent, promote and s=
+ell your products in=C2=A0
+UK market through our existing=C2=A0network as well as by utilizing our str=
+ong channel in the related sectors .
+
+Also we have an urgent inquiry for these products. Kindly refer to attached=
+ for our Purchase Order 
+and Data Sheet for your reference=C2=A0.
+
+Please quote your best price for USD/Mt=E2=80=A6=E2=80=A6 CFR Chittagong by=
+ sea against L/C at sight=C2=A0 
+OR TT &amp; share certificate of analysis of these products.=C2=A0
+
+We are seeking your kind support to develop this business towards all our e=
+xisting end users.
+
+Your quick feedback would be highly appreciated by acknowledging=C2=A0recei=
+pt=C2=A0of my mail.=C2=A0
+
+
+
+
+Best Regards,
+
+=C2=A0
+=C2=A0
+
+Jamison Krie
+Procurement Manager
+=C2=A0
+Tangent Trading Co. Ltd=C2=A0=C2=A0
+1 Dollis Mews =E2=80=A2 London =E2=80=A2 N3 1HH=C2=A0
+Tel: +44 (0) 20 8349 4822 |=C2=A0Fax: +44 (0) 20 8349 4860
+Email:=C2=A0jamison.krier@hotmail.com
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0jamison.krier@tangenttrading.com
+--__=_AltPart_1273713894_1535890025
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<br> <br>
+<div><span style=3D"font-size: 10pt; color: #003366;"><span style=3D"vertic=
+al-align: inherit;"><span style=3D"vertical-align: inherit;"><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;">K=
+ind Attention: International Sales Manager:</span></span></span></span><=
+/span></div>
+<div><span style=3D"font-size: 10pt; color: #003366;">=C2=A0</span></div>
+<div><span style=3D"font-size: 10pt; color: #003366;"><span style=3D"vertic=
+al-align: inherit;"><span style=3D"vertical-align: inherit;"><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;">D=
+ear Sir/Madam,</span></span></span></span><br><br></span></div>
+<div><span style=3D"font-size: 10pt; color: #003366;"><span style=3D"vertic=
+al-align: inherit;"><span style=3D"vertical-align: inherit;"><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;">I=
+ have contacted you severally=C2=A0with regards=C2=A0to the above subjec=
+t matter with no response, </span></span></span></span><br><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;">=
+<span style=3D"vertical-align: inherit;"><span style=3D"vertical-align: =
+inherit;">kindly redirect me person in charge.</span></span></span></spa=
+n></span></div>
+<div><br><span style=3D"color: #003366;"><span style=3D"font-size: 10pt;"><=
+span style=3D"vertical-align: inherit;"><span style=3D"vertical-align: i=
+nherit;"><span style=3D"vertical-align: inherit;"><span style=3D"vertica=
+l-align: inherit;">The=C2=A0Tangent Trading Co. Ltd. We are representing=
+ around 100 world famous companies </span></span></span></span><br><span=
+ style=3D"vertical-align: inherit;"><span style=3D"vertical-align: inher=
+it;"><span style=3D"vertical-align: inherit;"><span style=3D"vertical-al=
+ign: inherit;">and their products in </span></span></span></span></span>=
+<span style=3D"font-size: 10pt;"><span style=3D"vertical-align: inherit;=
+"><span style=3D"vertical-align: inherit;"><span style=3D"vertical-align=
+: inherit;"><span style=3D"vertical-align: inherit;">market to the relev=
+ant sectors. Ensuring customer supports and supplying </span></span></sp=
+an></span><br><span style=3D"vertical-align: inherit;"><span style=3D"ve=
+rtical-align: inherit;"><span style=3D"vertical-align: inherit;"><span s=
+tyle=3D"vertical-align: inherit;">quality products is our main objective=
+s.</span></span></span></span></span></span></div>
+<div><br><span style=3D"color: #003366;"><span style=3D"font-size: 10pt;"><=
+span style=3D"vertical-align: inherit;"><span style=3D"vertical-align: i=
+nherit;"><span style=3D"vertical-align: inherit;"><span style=3D"vertica=
+l-align: inherit;">We are highly interested to represent and sell your p=
+roducts in United Kingdom. </span></span></span></span><br><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;">=
+<span style=3D"vertical-align: inherit;"><span style=3D"vertical-align: =
+inherit;">We have an established a reliable market here.=C2=A0</span></s=
+pan></span></span></span><span style=3D"font-size: 10pt;"><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;"><s=
+pan style=3D"vertical-align: inherit;"><span style=3D"vertical-align: in=
+herit;">We wish your products to be highly accepted. </span></span></spa=
+n></span><br><br><span style=3D"vertical-align: inherit;"><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;"><s=
+pan style=3D"vertical-align: inherit;">We found that you are the best of=
+ manufacturer for these products. </span></span></span></span></span></s=
+pan><br><br><span style=3D"color: #003366;"><span style=3D"font-size: 10=
+pt;"><span style=3D"vertical-align: inherit;"><span style=3D"vertical-al=
+ign: inherit;"><span style=3D"vertical-align: inherit;"><span style=3D"v=
+ertical-align: inherit;">It would be our pleasure if you kindly allow us=
+ to represent, promote and sell your products in=C2=A0</span></span></sp=
+an></span><br><span style=3D"vertical-align: inherit;"><span style=3D"ve=
+rtical-align: inherit;"><span style=3D"vertical-align: inherit;"><span s=
+tyle=3D"vertical-align: inherit;">UK market through our existing=C2=A0</=
+span></span></span></span></span><span style=3D"font-size: 10pt;"><span =
+style=3D"vertical-align: inherit;"><span style=3D"vertical-align: inheri=
+t;"><span style=3D"vertical-align: inherit;"><span style=3D"vertical-ali=
+gn: inherit;">network as well as by utilizing our strong channel in the =
+related sectors .</span></span></span></span></span></span></div>
+<div><br><span style=3D"font-size: 10pt; color: #003366;"><span style=3D"ve=
+rtical-align: inherit;"><span style=3D"vertical-align: inherit;"><span s=
+tyle=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit=
+;">Also we have an urgent inquiry for these products. Kindly refer to at=
+tached for our Purchase Order </span></span></span></span><br><span styl=
+e=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;">=
+<span style=3D"vertical-align: inherit;"><span style=3D"vertical-align: =
+inherit;">and Data Sheet for your reference=C2=A0.</span></span></span><=
+/span></span></div>
+<div><br><span style=3D"color: #003366;"><span style=3D"font-size: 10pt;"><=
+span style=3D"vertical-align: inherit;"><span style=3D"vertical-align: i=
+nherit;"><span style=3D"vertical-align: inherit;"><span style=3D"vertica=
+l-align: inherit;">Please quote your best price for USD/Mt=E2=80=A6=E2=
+=80=A6 CFR Chittagong by sea against L/C at sight=C2=A0 </span></span><=
+/span></span><br><span style=3D"vertical-align: inherit;"><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;"><s=
+pan style=3D"vertical-align: inherit;">OR TT &amp; share certificate of =
+analysis of </span></span></span></span></span><span style=3D"font-size:=
+ 10pt;"><span style=3D"vertical-align: inherit;"><span style=3D"vertical=
+-align: inherit;"><span style=3D"vertical-align: inherit;"><span style=
+=3D"vertical-align: inherit;">these products.=C2=A0</span></span></span=
+></span></span></span></div>
+<div><br><span style=3D"font-size: 10pt; color: #003366;"><span style=3D"ve=
+rtical-align: inherit;"><span style=3D"vertical-align: inherit;"><span s=
+tyle=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit=
+;">We are seeking your kind support to develop this business towards all=
+ our existing end users.</span></span></span></span></span></div>
+<div><br><span style=3D"font-size: 10pt; color: #003366;"><span style=3D"ve=
+rtical-align: inherit;"><span style=3D"vertical-align: inherit;"><span s=
+tyle=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit=
+;">Your quick feedback would be highly appreciated by acknowledging=C2=
+=A0receipt=C2=A0of my mail.=C2=A0</span></span></span></span></span><br=
+><br><br></div>
+<table width=3D"677">
+<tbody>
+<tr>
+<td width=3D"225">
+<div><span style=3D"font-size: 10pt; color: #003366;"><strong><em><span sty=
+le=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;"=
+><span style=3D"vertical-align: inherit;"><span style=3D"vertical-align:=
+ inherit;">Best Regards,</span></span></span></span></em></strong></span=
+></div>
+</td>
+<td width=3D"436">
+<div><span style=3D"color: #003366;">=C2=A0</span></div>
+</td>
+</tr>
+<tr>
+<td width=3D"225"><span style=3D"color: #003366;">=C2=A0</span></td>
+<td width=3D"436">
+<div><span style=3D"font-size: 10pt; color: #003366;"><strong><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;">=
+<span style=3D"vertical-align: inherit;"><span style=3D"vertical-align: =
+inherit;">Jamison Krie</span></span></span></span></strong></span></div>=
+
+<div><span style=3D"font-size: 10pt; color: #003366;"><strong><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;">=
+<span style=3D"vertical-align: inherit;"><span style=3D"vertical-align: =
+inherit;">Procurement Manager</span></span></span></span></strong></span=
+></div>
+<div><span style=3D"font-size: 10pt; color: #003366;"><strong>=C2=A0</stron=
+g></span><br><span style=3D"font-size: 10pt; color: #003366;"><strong><s=
+pan style=3D"vertical-align: inherit;"><span style=3D"vertical-align: in=
+herit;"><span style=3D"vertical-align: inherit;"><span style=3D"vertical=
+-align: inherit;">Tangent Trading Co. Ltd=C2=A0</span></span></span></sp=
+an></strong><strong>=C2=A0</strong></span></div>
+<div><span style=3D"font-size: 10pt; color: #003366;"><span style=3D"vertic=
+al-align: inherit;"><span style=3D"vertical-align: inherit;"><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;">1=
+ Dollis Mews =E2=80=A2 London =E2=80=A2 N3 1HH=C2=A0</span></span></span=
+></span></span><br><span style=3D"font-size: 10pt; color: #003366;"><spa=
+n style=3D"vertical-align: inherit;"><span style=3D"vertical-align: inhe=
+rit;"><span style=3D"vertical-align: inherit;"><span style=3D"vertical-a=
+lign: inherit;">Tel: +44 (0) 20 8349 4822 |=C2=A0Fax: +44 (0) 20 8349 48=
+60</span></span></span></span></span></div>
+<div><span style=3D"font-size: 10pt; color: #003366;"><span style=3D"vertic=
+al-align: inherit;"><span style=3D"vertical-align: inherit;"><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;">E=
+mail:=C2=A0</span></span></span></span><a style=3D"color: #003366;" targ=
+et=3D'_blank'><span style=3D"vertical-align: inherit;"><span style=3D"ve=
+rtical-align: inherit;"><span style=3D"vertical-align: inherit;"><span s=
+tyle=3D"vertical-align: inherit;">jamison.krier@hotmail.com</span></span=
+></span></span></a></span></div>
+<div><span style=3D"font-size: 10pt; color: #003366;">=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0=C2=A0<a style=3D"color: #003366;" target=3D'_blank'><span=
+ style=3D"vertical-align: inherit;"><span style=3D"vertical-align: inher=
+it;"><span style=3D"vertical-align: inherit;"><span style=3D"vertical-al=
+ign: inherit;">jamison.krier</span></span></span></span></a><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;=
+"><span style=3D"vertical-align: inherit;"><span style=3D"vertical-align=
+: inherit;">@tangenttrading.com</span></span></span></span></span></div>=
+
+</td>
+</tr>
+</tbody>
+</table>
+
+--__=_AltPart_1273713894_1535890025--
+
+--__=_MixedPart_1984692412_192408273
+Content-Type: image/png; name="logo (2).png"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="logo (2).png"
+
+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
+7dWxAwQAAAAASUVORK5CYII=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--__=_MixedPart_1984692412_192408273
+Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;
+	name="Purchase Order.xlsx"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Purchase Order.xlsx"
+
+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
+AAdE9KtbUEsFBgAAAAAMAAwAjgMAAKchAAAAAA==
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--__=_MixedPart_1984692412_192408273--

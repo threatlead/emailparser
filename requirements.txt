@@ -1,0 +1,4 @@
+olefile
+pyunpack
+patool
+python-magic
