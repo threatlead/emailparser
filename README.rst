@@ -2,7 +2,7 @@ Email Parser
 ===========
 (Maintainer: ThreatLead)
 
-Parses email, extracts attachment. Written to parse emails uploaded to VT and submit attachments to CASE.
+Parses email, extracts attachment. Written to parse emails uploaded to VT.
 
 Example:
 
